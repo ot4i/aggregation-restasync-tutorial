@@ -215,15 +215,15 @@
                     "_runComment": "The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
                 "sections":[
                             {
-                                "section":"<h4>Deploy the back-end Callable Flow Applications</h4>",
+                                "section":"<h4>Deploy the back-end REST APIs</h4>",
                                 "steps":{
                                     "type":"ordered",
                                     "details":[
                                             {
-                                            "details":"Deploy the <span class='application'>AggregationCallableAsyncBackend1</span> application, by dragging and dropping it on to the default integration server."
+                                            "details":"Deploy the <span class='application'>AggregationRESTBackend1</span> REST API, by dragging and dropping it on to the default integration server."
                                             },
                                             {
-                                            "details":"Deploy the <span class='application'>AggregationCallableAsyncBackend2</span> application, by dragging and dropping it on to the default integration server."
+                                            "details":"Deploy the <span class='application'>AggregationRESTBackend2</span> REST API, by dragging and dropping it on to the default integration server."
                                             }
                                     ]
                                 }
@@ -234,19 +234,19 @@
                                     "type": "ordered",
                                     "details": [
                                             {
-                                            "details": "Look inside the <span class='resource'>AggregationCallableAsync</span> REST API, right-click the <span class='resource'>AggregationCallableAsync.msgflow</span> and select <span class='resource'>Open with > Message Flow Editor</span>.",
+                                            "details": "Look inside the <span class='resource'>AggregationRESTAsync</span> REST API, right-click the <span class='resource'>AggregationRESTAsync.msgflow</span> and select <span class='resource'>Open with > Message Flow Editor</span>.",
                                             "substeps":{
                                                 "type": "unordered",
                                                 "details": 
 								                [
                                                     {
-                                                    "details": "Click the Flow Exerciser icon <img src='http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png' alt='' /> to start testing the flow"
+                                                    "details": "Click the Flow Exerciser icon <img src='http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png' alt='' /> to start testing the flow. When it appears, the <span class='resource'>Ready to record message</span> dialog can be dismissed by clicking Close."
                                                     }
                                                 ]
                                             }
                                     },
                                     {
-                                        "details": "Open any web browser. We will be using this to send an HTTP GET into the REST API <span class='resource'>AggregationCallableAsync</span>.",
+                                        "details": "Open any web browser. We will be using this to send an HTTP GET into the REST API <span class='resource'>AggregationRESTAsync</span>.",
                                         "substeps":{
                                         "type": "unordered",
                                         "details": 
@@ -255,16 +255,16 @@
                                           "details": "In the address bar of the browser paste in the URL for the HTTP GET operation. If you have used default settings, then this is likely to be:"
                                         },
                                         {
-                                          "details": "http://localhost:7080/aggregationcallableasync/v1/AggregatedResponse?Field1=value1&Field2=value2"
+                                          "details": "http://localhost:7080/aggregationrestasync/v1/AggregatedResponse?Field1=value1&Field2=value2"
                                         },
                                         {
-                                          "details": "Note that this URL includes query parameters with the values <span class='resource'>value1</span> and <span class='resource'>value2</span>. One of these values will be sent to each back-end flow. The back end flows will uppercase the values and reply."
+                                          "details": "Note that this URL includes query parameters with the values <span class='resource'>value1</span> and <span class='resource'>value2</span>. One of these values will be sent to each back-end REST API. The back end REST APIs will uppercase the values and reply."
                                         }
                                         ]
                                         }
                                     },
                                     {
-                                    "details": "Return to <span class='resource'>AggregationCallableAsync.msgflow</span>.",
+                                    "details": "Return to <span class='resource'>AggregationRESTAsync.msgflow</span>.",
                                     "substeps":{
                                     "type": "unordered",
                                     "details": 
@@ -273,7 +273,7 @@
                                           "details": "Click the View Path icon <img src='http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/viewPath.png' alt='' /> to see the path which the message took through the flow and see the message content on the path. You can open the subflow <span class='resource'>getAggregatedResponse.subflow</span> and click on the flow connections to see what the message tree looked like as it traversed through the REST API."
                                         },
                     				    {
-                                            "details": "Back in the web browser, you should see the final output message carries return data from both of the back-end callable message flows which has been changed to upper case. It should look like this:"
+                                            "details": "Back in the web browser, you should see the final output message carries return data from both of the back-end REST APIs which has been changed to upper case. It should look like this:"
 				                        },				                                                                {
                                           "details": "<span class='resource'>{&quot;ResponseBackend1&quot;:&quot;VALUE1&quot;,&quot;ResponseBackend2&quot;:&quot;VALUE2&quot;}</span>"
                                         }
@@ -284,7 +284,7 @@
                             }
                         },
 			{
-			    "section": "This tutorial has shown the Aggregation nodes orchestrating an asynchronous fan-out and an associated fan-in of messages to Callable Flows."
+			    "section": "This tutorial has shown the Aggregation nodes orchestrating an asynchronous fan-out and an associated fan-in of messages using asynchronous REST nodes."
 			}
                     ]
                 },
