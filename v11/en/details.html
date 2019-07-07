@@ -15,14 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="copyright" content="Copyright IBM Corporation 2014" />
-		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="author" content="IBM">
-		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="keywords" content="keywords" > 
 		<meta name="robots" content="index,follow">
-		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
 		
-		<title>IBM Integration Bus V10 Tutorial</title>
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
 
     	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
 		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
@@ -63,11 +63,11 @@
       <div class="row">
       
         
-        <p> This tutorial demonstrates a simple REST API that receives an HTTP GET, and fans-out two separate asynchronous REST invocations. Two separate example back-end IIB REST APIs are provided which receive these requests, do a trivial transformation to upper-case the data, and reply. The fan-in part of the original REST API aggregates values from the two response messages together. </p>
+        <p> This tutorial demonstrates a simple REST API that receives an HTTP GET, and fans-out two separate asynchronous REST invocations. Two separate example back-end ACE REST APIs are provided which receive these requests, do a trivial transformation to upper-case the data, and reply. The fan-in part of the original REST API aggregates values from the two response messages together. </p>
       
-        <p> This tutorial requires an IIB node which is associated with a local queue manager. </p>
+        <p> This tutorial requires an ACE integration node (or standalone server) which is associated with a local queue manager. </p>
       
-        <p> In IBM Integration Bus, an application is a container for all the resources that are required to create a solution. A REST API is a specialized form of an application which describes a set of resources, and a set of operations that can be called on those resources from any HTTP client. This tutorial provides a REST API which holds the fan-out / fan-in aggregation flow, and two other REST APIs for the back-end flows. </p>
+        <p> In IBM App Connect Enterprise, an application is a container for all the resources that are required to create a solution. A REST API is a specialized form of an application which describes a set of resources, and a set of operations that can be called on those resources from any HTTP client. This tutorial provides a REST API which holds the fan-out / fan-in aggregation flow, and two other REST APIs for the back-end flows. </p>
       
       </div>	  
 		<!-- help links do not work in details page for GA 
@@ -125,7 +125,7 @@
           <ul>
           
           
-            <li>Use IBM Integration Bus to fan-out asynchronous REST invocations and aggregate their responses.</li>
+            <li>Use IBM App Connect Enterprise to fan-out asynchronous REST invocations and aggregate their responses.</li>
           
           </ul>
         </div>
